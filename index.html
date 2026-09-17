@@ -9,7 +9,198 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Digital Scholarship Choose Your Own Adventure.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Digital Scholarship Choose Your Own Adventure" startnode="1" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="8A7FB649-5233-415A-B35D-7476ABA28661" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Digital Scholarship Projects Choose Your Own Adventure" tags="" position="1000,150" size="100,100">Welcome to the Digital Scholarship Choose Your Own Adventure simulation! Are you looking for library support as you develop your digital scholarship projects, but don&#39;t know where to start? This simulation is for you~! You&#39;ll uncover what services the library offers, as well as who to reach out to access these services. Let&#39;s get started. 
+<tw-storydata name="Digital Scholarship Choose Your Own Adventure" startnode="1" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="8A7FB649-5233-415A-B35D-7476ABA28661" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* ============================================
+   INSTITUTIONAL BRAND HARLOWE STYLESHEET
+   Primary: #841617 (Burgundy)
+   Secondary: #000000, #ffffff
+   Fonts: Arboria, Arboria Black
+   ============================================ */
+
+/* IMPORT ARBORIA FONTS FROM GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Arboria:wght@400;700&display=swap');
+
+/* MAIN STORY BODY & BACKGROUND */
+body {
+  background-color: #ffffff;  /* Clean white background */
+  color: #000000;             /* Black text for strong contrast */
+}
+
+/* THE PASSAGE AREA (where story text appears) */
+tw-story {
+  background-color: #ffffff;  /* White passage background */
+  color: #000000;             /* Black text */
+  font-family: 'Arboria', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* PASSAGE TEXT STYLING */
+tw-passage {
+  padding: 2.5em;
+  max-width: 900px;
+  margin: 0 auto;
+  border-left: 5px solid #841617;  /* Brand color accent */
+  background-color: #ffffff;
+}
+
+/* LINKS (story choices) - PRIMARY BRAND COLOR */
+tw-link {
+  color: #841617;             /* Burgundy links */
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+tw-link:hover {
+  color: #ffffff;             /* White text on hover */
+  background-color: #841617;  /* Burgundy background on hover */
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* VISITED LINKS */
+tw-link.visited {
+  color: #5a0f10;             /* Darker burgundy for visited */
+}
+
+tw-link.visited:hover {
+  background-color: #5a0f10;
+  color: #ffffff;
+}
+
+/* HEADINGS - ARBORIA BLACK FONT */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arboria Black', 'Arboria', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #841617;             /* Burgundy headings */
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+  font-weight: 700;
+}
+
+h1 { 
+  font-size: 2.8em;
+  border-bottom: 3px solid #841617;
+  padding-bottom: 0.3em;
+}
+
+h2 { font-size: 2.2em; }
+h3 { font-size: 1.8em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1.1em; }
+
+/* EMPHASIZED TEXT */
+strong, b {
+  color: #841617;
+  font-weight: 700;
+  font-family: 'Arboria Black', 'Arboria', sans-serif;
+}
+
+em, i {
+  font-style: italic;
+  color: #3a3a3a;
+  font-family: 'Arboria', sans-serif;
+}
+
+/* BUTTONS (if using button styling) */
+button, tw-link[role="button"] {
+  background-color: #841617;
+  color: #ffffff;
+  border: 2px solid #841617;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Arboria', sans-serif;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+button:hover, tw-link[role="button"]:hover {
+  background-color: #5a0f10;
+  border-color: #5a0f10;
+  box-shadow: 0 4px 8px rgba(132, 22, 23, 0.3);
+}
+
+button:active, tw-link[role="button"]:active {
+  transform: translateY(2px);
+}
+
+/* CODE BLOCKS (if using code in your story) */
+pre, code {
+  background-color: #f5f5f5;
+  color: #841617;
+  font-family: 'Courier New', monospace;
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+  border-left: 3px solid #841617;
+}
+
+pre {
+  padding: 1.2em;
+  overflow-x: auto;
+  line-height: 1.4;
+}
+
+/* BLOCKQUOTES */
+blockquote {
+  border-left: 4px solid #841617;
+  padding-left: 1.5em;
+  margin-left: 0;
+  color: #4a4a4a;
+  font-style: italic;
+  font-family: 'Arboria', sans-serif;
+}
+
+/* HORIZONTAL RULES */
+hr {
+  border: none;
+  height: 2px;
+  background-color: #841617;
+  margin: 1.5em 0;
+}
+
+/* LISTS */
+ul, ol {
+  font-family: 'Arboria', sans-serif;
+  color: #000000;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* SELECTED/ACTIVE LINKS */
+tw-link.selected {
+  background-color: #841617;
+  color: #ffffff;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* PASSAGE TRANSITIONS */
+tw-story {
+  transition: opacity 0.3s ease;
+}
+
+/* ACCESSIBILITY: ENSURE GOOD CONTRAST */
+body, tw-story, tw-passage {
+  min-height: 100vh;
+}
+
+/* ============================================
+   COLOR REFERENCE:
+   Primary Burgundy: #841617
+   Black: #000000
+   White: #ffffff
+   Darker Burgundy: #5a0f10
+   Light Gray: #f5f5f5
+   Dark Gray: #3a3a3a
+   
+   All colors provide strong contrast ratios
+   for accessibility (WCAG AA compliant)
+   ============================================ */</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="stylesheet" color="red"></tw-tag><tw-passagedata pid="1" name="Digital Scholarship Projects Choose Your Own Adventure" tags="" position="1000,150" size="100,100">Welcome to the Digital Scholarship Choose Your Own Adventure simulation! Are you looking for library support as you develop your digital scholarship projects, but don&#39;t know where to start? This simulation is for you~! You&#39;ll uncover what services the library offers, as well as who to reach out to access these services. Let&#39;s get started. 
 
 First question: what kind of project are you wanting to make? 
 
@@ -43,37 +234,228 @@ For help finding options, or any other digital scholarship related question, ple
 
 [[Yes-&gt;HubRepo]]
 
-[[No-&gt;DSDS Contact Form]]</tw-passagedata><tw-passagedata pid="8" name="In-Progress Project" tags="" position="1125,750" size="100,100"></tw-passagedata><tw-passagedata pid="9" name="Complete Project" tags="" position="725,750" size="100,100">Is your completed project in maintenance mode, or are you planning on making updates in the future?
+[[No-&gt;DSDS Contact Form]]</tw-passagedata><tw-passagedata pid="8" name="Complete Project" tags="" position="725,750" size="100,100">Is your completed project in maintenance mode, or are you planning on making updates in the future?
 
 [[My project is done, and I won&#39;t be making any changes to it in the future.-&gt;Archive]]
 
-[[My project is done, but there are updates that I could see myself making to the project in the future-&gt;Website]]</tw-passagedata><tw-passagedata pid="10" name="Archive" tags="" position="525,975" size="100,100">Is your site still being accessed by researchers?
+[[My project is done, but there are updates that I could see myself making to the project in the future-&gt;Website]]</tw-passagedata><tw-passagedata pid="9" name="Archive" tags="" position="525,975" size="100,100">Is your site still being accessed by researchers?
 
 [[Yes-&gt;Static Site Capacity]]
 
-[[No-&gt;DSDS Contact Form]]</tw-passagedata><tw-passagedata pid="11" name="Website" tags="" position="825,975" size="100,100">Was your project built with WordPress, Omeka, or in a static format?
+[[No-&gt;DSDS Contact Form]]</tw-passagedata><tw-passagedata pid="10" name="Website" tags="" position="825,975" size="100,100">Was your project built with WordPress, Omeka, or in a static format?
 
 [[Yes-&gt;HubRepo]]
 
 [[No-&gt;Unsupported]]
 
-[[I&#39;m not sure-&gt;Help]]</tw-passagedata><tw-passagedata pid="12" name="HubRepo" tags="" position="925,1175" size="100,100">You might be a good candidate for our HubRepo Pilot Project! Please fill out this &lt;a href=&quot;https://ou.libwizard.com/f/interest-form&quot; target=&quot;blank&quot;&gt;intake form&lt;/a&gt; to schedule a consultation with a DSDS team member. </tw-passagedata><tw-passagedata pid="13" name="Help" tags="" position="1125,1175" size="100,100">Please reach out to us for more help/information by filling out this &lt;a href=&quot;https://libanswers.ou.edu/form?queue_id=6769&quot; target=&quot;blank&quot;&gt;intake form&lt;/a&gt;.</tw-passagedata><tw-passagedata pid="14" name="Unsupported" tags="" position="675,1175" size="100,100">Are you willing/have the resources to migrate to a WordPress, Omeka, or static site?
+[[I&#39;m not sure-&gt;Help]]</tw-passagedata><tw-passagedata pid="11" name="HubRepo" tags="" position="925,1175" size="100,100">You might be a good candidate for our HubRepo Pilot Project! Please fill out this &lt;a href=&quot;https://ou.libwizard.com/f/interest-form&quot; target=&quot;blank&quot;&gt;intake form&lt;/a&gt; to schedule a consultation with a DSDS team member. </tw-passagedata><tw-passagedata pid="12" name="Help" tags="" position="1125,1175" size="100,100">Please reach out to us for more help/information by filling out this &lt;a href=&quot;https://libanswers.ou.edu/form?queue_id=6769&quot; target=&quot;blank&quot;&gt;intake form&lt;/a&gt;.</tw-passagedata><tw-passagedata pid="13" name="Unsupported" tags="" position="675,1175" size="100,100">Are you willing/have the resources to migrate to a WordPress, Omeka, or static site?
 
 [[Yes-&gt;HubRepo]]
 
-[[No-&gt;DSDS Contact Form]] </tw-passagedata><tw-passagedata pid="15" name="Static Site Capacity" tags="" position="425,1100" size="100,100">Can your site become a &quot;static website&quot; (no database, just front-end files)?
+[[No-&gt;DSDS Contact Form]] </tw-passagedata><tw-passagedata pid="14" name="Static Site Capacity" tags="" position="425,1100" size="100,100">Can your site become a &quot;static website&quot; (no database, just front-end files)?
 
 [[Yes-&gt;HubRepo]]
 
-[[No-&gt;Data vs. Interface]]</tw-passagedata><tw-passagedata pid="16" name="Data vs. Interface" tags="" position="425,1225" size="100,100">What is more important for you: that researchers can access your data, or that they can access your web interface?
+[[No-&gt;Data vs. Interface]]</tw-passagedata><tw-passagedata pid="15" name="Data vs. Interface" tags="" position="425,1225" size="100,100">What is more important for you: that researchers can access your data, or that they can access your web interface?
 
 [[Data -&gt; Dryad]]
 
-[[Web Interface -&gt; Web Archive]]</tw-passagedata><tw-passagedata pid="17" name=" Dryad" tags="" position="300,1350" size="100,100">Since researchers being able to access your data is your greatest priority, exporting your data and storing it in Dryad could be a potential solution. 
+[[Web Interface -&gt; Web Archive]]</tw-passagedata><tw-passagedata pid="16" name=" Dryad" tags="" position="300,1350" size="100,100">Since researchers being able to access your data is your greatest priority, exporting your data and storing it in Dryad could be a potential solution. 
 
-For more information, please reach out to the DSDS team via this &lt;a href=&quot;https://libanswers.ou.edu/form?queue_id=6769&quot; target=&quot;blank&quot;&gt;intake form&lt;/a&gt;. </tw-passagedata><tw-passagedata pid="18" name=" Web Archive" tags="" position="525,1350" size="100,100">Since researchers being able to access your web interface is your greatest priority, capturing your website in a web archive sounds like a potential solution. 
+For more information, please reach out to the DSDS team via this &lt;a href=&quot;https://libanswers.ou.edu/form?queue_id=6769&quot; target=&quot;blank&quot;&gt;intake form&lt;/a&gt;. </tw-passagedata><tw-passagedata pid="17" name=" Web Archive" tags="" position="525,1350" size="100,100">Since researchers being able to access your web interface is your greatest priority, capturing your website in a web archive sounds like a potential solution. 
 
-For more information, please reach out to the DSDS team via this &lt;a href=&quot;https://libanswers.ou.edu/form?queue_id=6769&quot; target=&quot;blank&quot;&gt;intake form&lt;/a&gt;. </tw-passagedata><tw-passagedata pid="19" name="DSDS C" tags="" position="1200,900" size="100,100"></tw-passagedata></tw-storydata>
+For more information, please reach out to the DSDS team via this &lt;a href=&quot;https://libanswers.ou.edu/form?queue_id=6769&quot; target=&quot;blank&quot;&gt;intake form&lt;/a&gt;. </tw-passagedata><tw-passagedata pid="18" name="stylesheet" tags="stylesheet" position="1125,550" size="100,100">/* ============================================
+   INSTITUTIONAL BRAND HARLOWE STYLESHEET
+   Primary: #841617 (Burgundy)
+   Secondary: #000000, #ffffff
+   Fonts: Arboria, Arboria Black
+   ============================================ */
+
+/* IMPORT ARBORIA FONTS FROM GOOGLE FONTS */
+@import url(&#39;https://fonts.googleapis.com/css2?family=Arboria:wght@400;700&amp;display=swap&#39;);
+
+/* MAIN STORY BODY &amp; BACKGROUND */
+body {
+  background-color: #ffffff;  /* Clean white background */
+  color: #000000;             /* Black text for strong contrast */
+}
+
+/* THE PASSAGE AREA (where story text appears) */
+tw-story {
+  background-color: #ffffff;  /* White passage background */
+  color: #000000;             /* Black text */
+  font-family: &#39;Arboria&#39;, -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* PASSAGE TEXT STYLING */
+tw-passage {
+  padding: 2.5em;
+  max-width: 900px;
+  margin: 0 auto;
+  border-left: 5px solid #841617;  /* Brand color accent */
+  background-color: #ffffff;
+}
+
+/* LINKS (story choices) - PRIMARY BRAND COLOR */
+tw-link {
+  color: #841617;             /* Burgundy links */
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+tw-link:hover {
+  color: #ffffff;             /* White text on hover */
+  background-color: #841617;  /* Burgundy background on hover */
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* VISITED LINKS */
+tw-link.visited {
+  color: #5a0f10;             /* Darker burgundy for visited */
+}
+
+tw-link.visited:hover {
+  background-color: #5a0f10;
+  color: #ffffff;
+}
+
+/* HEADINGS - ARBORIA BLACK FONT */
+h1, h2, h3, h4, h5, h6 {
+  font-family: &#39;Arboria Black&#39;, &#39;Arboria&#39;, -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, sans-serif;
+  color: #841617;             /* Burgundy headings */
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+  font-weight: 700;
+}
+
+h1 { 
+  font-size: 2.8em;
+  border-bottom: 3px solid #841617;
+  padding-bottom: 0.3em;
+}
+
+h2 { font-size: 2.2em; }
+h3 { font-size: 1.8em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1.1em; }
+
+/* EMPHASIZED TEXT */
+strong, b {
+  color: #841617;
+  font-weight: 700;
+  font-family: &#39;Arboria Black&#39;, &#39;Arboria&#39;, sans-serif;
+}
+
+em, i {
+  font-style: italic;
+  color: #3a3a3a;
+  font-family: &#39;Arboria&#39;, sans-serif;
+}
+
+/* BUTTONS (if using button styling) */
+button, tw-link[role=&quot;button&quot;] {
+  background-color: #841617;
+  color: #ffffff;
+  border: 2px solid #841617;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: &#39;Arboria&#39;, sans-serif;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+button:hover, tw-link[role=&quot;button&quot;]:hover {
+  background-color: #5a0f10;
+  border-color: #5a0f10;
+  box-shadow: 0 4px 8px rgba(132, 22, 23, 0.3);
+}
+
+button:active, tw-link[role=&quot;button&quot;]:active {
+  transform: translateY(2px);
+}
+
+/* CODE BLOCKS (if using code in your story) */
+pre, code {
+  background-color: #f5f5f5;
+  color: #841617;
+  font-family: &#39;Courier New&#39;, monospace;
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+  border-left: 3px solid #841617;
+}
+
+pre {
+  padding: 1.2em;
+  overflow-x: auto;
+  line-height: 1.4;
+}
+
+/* BLOCKQUOTES */
+blockquote {
+  border-left: 4px solid #841617;
+  padding-left: 1.5em;
+  margin-left: 0;
+  color: #4a4a4a;
+  font-style: italic;
+  font-family: &#39;Arboria&#39;, sans-serif;
+}
+
+/* HORIZONTAL RULES */
+hr {
+  border: none;
+  height: 2px;
+  background-color: #841617;
+  margin: 1.5em 0;
+}
+
+/* LISTS */
+ul, ol {
+  font-family: &#39;Arboria&#39;, sans-serif;
+  color: #000000;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* SELECTED/ACTIVE LINKS */
+tw-link.selected {
+  background-color: #841617;
+  color: #ffffff;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* PASSAGE TRANSITIONS */
+tw-story {
+  transition: opacity 0.3s ease;
+}
+
+/* ACCESSIBILITY: ENSURE GOOD CONTRAST */
+body, tw-story, tw-passage {
+  min-height: 100vh;
+}
+
+/* ============================================
+   COLOR REFERENCE:
+   Primary Burgundy: #841617
+   Black: #000000
+   White: #ffffff
+   Darker Burgundy: #5a0f10
+   Light Gray: #f5f5f5
+   Dark Gray: #3a3a3a
+   
+   All colors provide strong contrast ratios
+   for accessibility (WCAG AA compliant)
+   ============================================ */</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
